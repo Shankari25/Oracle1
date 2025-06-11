@@ -44,3 +44,52 @@
   <script src="script.js"></script>
 </body>
 </html>
+<!-- Contact Form -->
+<form id="contact-form">
+  <label for="full-name">Full Name:</label>
+  <input type="text" id="full-name" name="full-name" required>
+
+  <label for="email">Email:</label>
+  <input type="email" id="email" name="email" required>
+
+  <label for="message">Message:</label>
+  <textarea id="message" name="message" required></textarea>
+
+  <button type="submit">Submit</button>
+</form>
+
+// Get the form element
+const form = document.getElementById('contact-form');
+
+// Add event listener to form submission
+form.addEventListener('submit', (e) => {
+  // Get the input values
+  const fullName = document.getElementById('full-name').value.trim();
+  const email = document.getElementById('email').value.trim();
+  const message = document.getElementById('message').value.trim();
+
+  // Validate the inputs
+  if (fullName === '') {
+    alert('Please enter your full name.');
+    e.preventDefault();
+    return;
+  }
+
+  if (!validateEmail(email)) {
+    alert('Please enter a valid email address.');
+    e.preventDefault();
+    return;
+  }
+
+  if (message.length < 20) {
+    alert('Please enter a message with at least 20 characters.');
+    e.preventDefault();
+    return;
+  }
+});
+
+// Email validation function
+function validateEmail(email) {
+  const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+  return emailRegex.test(email);
+}
