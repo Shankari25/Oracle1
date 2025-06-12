@@ -16,7 +16,7 @@
     <!-- Profile Cards -->
     <div class="profile-cards">
       <div class="profile-card">
-        <img src="cs_anitha.jpg" alt="HOD Photo">
+        <img src="cs_anitha.jpg" alt="HOD">
         <h3>Mrs. P. S. Anitha </h3>
         <p>Department of Computer Science</p>
         <p>Head and AssistantProfessor</p>
@@ -24,7 +24,7 @@
       </div>
 
       <div class="profile-card">
-        <img src="file/Internal storage/Download/cs_shankari.jpg" alt="Faculty 2 Photo">
+        <img src="cs_shankari.jpg" alt="Faculty 2">
         <h3>Mrs. S. Shankari</h3>
         <p>Department of ComputerScience</p>
         <p>AssistantProfessor</p>
@@ -32,7 +32,7 @@
       </div>
 
       <div class="profile-card">
-        <img src="file/Internal storage/Download/cs_usha.jpg" alt="Faculty 3 Photo">
+        <img src="cs_usha.jpg" alt="Faculty 3">
         <h3>AssistantProfessor</h3>
         <p>Department of Computer Science </p>
         <p>AssistantProfessor</p>
@@ -56,19 +56,13 @@
   <textarea id="message" name="message" required></textarea>
 
   <button type="submit">Submit</button>
-</form>
 
-// Get the form element
+
 const form = document.getElementById('contact-form');
-
-// Add event listener to form submission
 form.addEventListener('submit', (e) => {
-  // Get the input values
   const fullName = document.getElementById('full-name').value.trim();
   const email = document.getElementById('email').value.trim();
   const message = document.getElementById('message').value.trim();
-
-  // Validate the inputs
   if (fullName === '') {
     alert('Please enter your full name.');
     e.preventDefault();
@@ -88,8 +82,10 @@ form.addEventListener('submit', (e) => {
   }
 });
 
+
 // Email validation function
 function validateEmail(email) {
   const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
   return emailRegex.test(email);
 }
+</form>
