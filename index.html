@@ -57,7 +57,9 @@
   <textarea id="message" name="message" required></textarea>
 
   <button type="submit">Submit</button>
-
+<br>
+  <br>
+</form>
 
 const form = document.getElementById('contact-form');
 form.addEventListener('submit', (e) => {
@@ -89,5 +91,5 @@ function validateEmail(email) {
   const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
   return emailRegex.test(email);
 }
-</form>
+
 </html>
